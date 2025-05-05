@@ -193,5 +193,9 @@ Pair * nextTreeMap(TreeMap * tree) {
         aux = aux->parent;
     }
     tree->current = NULL; // no hay siguiente
-    return aux->pair; 
+    if (aux != NULL) {
+        return aux->pair; 
+    } else {
+        return NULL; 
+    }
 }
