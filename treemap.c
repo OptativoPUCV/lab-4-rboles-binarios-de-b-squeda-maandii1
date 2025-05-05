@@ -75,9 +75,12 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     tree->current = new; //el nodo actual va a apuntar al nuevo nodo insertado
 }
 
-TreeNode * minimum(TreeNode * x){
-
-    return NULL;
+TreeNode * minimum(TreeNode * x){ 
+    if (x == NULL) return NULL;
+    while (x->left != NULL) {
+        x = x->left;
+    }// la clave minima, es el nodo mas a la izquierda
+    return x;
 }
 
 
